@@ -1,0 +1,33 @@
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+header {
+  padding: 30px 30px 30px 30px;
+  font-family: Sora, sans-serif;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 22.5%;
+  height: auto;
+}
+
+.role {
+  background-color: crimson;
+  color: white;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin: 0 10px;
+}
