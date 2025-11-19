@@ -1,14 +1,41 @@
+:root {
+  /* BACKGROUND */
+  --bg-gradient-start: #f5f7fa;
+  --bg-gradient-end: #c3cfe2;
+
+  /* FONTS */
+  --font-primary: "Sora", sans-serif;
+
+  /* CALL TO ACTION BUTTON */
+  --btn-color: crimson;
+  --btn-hover-color: darkred;
+  --btn-border-width: 5px;
+  --btn-hover-radius: 20px;
+}
+
 body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start) 0%,
+    var(--bg-gradient-end) 100%
+  );
+  font-family: Sora, sans-serif;
 }
 
 header {
   padding: 30px 30px 30px 30px;
-  font-family: Sora, sans-serif;
 }
 
 h1 {
   font-size: 1.2rem;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 10px;
 }
 
 .navbar-container {
@@ -30,4 +57,53 @@ h1 {
   padding: 3px 8px;
   border-radius: 12px;
   margin: 0 10px;
+}
+
+.hero-section {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 16px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.hero-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.cta-button {
+  position: relative;
+  font-weight: 400;
+  margin-top: 20px;
+  background-color: var(--btn-color);
+  border-width: var(--btn-border-width);
+  border-color: var(--btn-color);
+  color: #fff;
+  box-sizing: border-box;
+  &::before {
+    width: 120%;
+    height: 155%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: var(--btn-hover-radius);
+    border: 1px solid var(--btn-hover-color);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.1);
+    transform-origin: center center;
+    transition: all 0.25s;
+    content: "";
+  }
+  &:hover {
+    background-color: var(--btn-hover-color);
+    border-color: var(--btn-color);
+    border-style: inset;
+    border-radius: var(--btn-hover-radius);
+    &::before {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 }
