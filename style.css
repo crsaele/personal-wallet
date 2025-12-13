@@ -32,10 +32,12 @@ h1 {
 
 h2 {
   margin-top: 20px;
+  font-size: 2.5em;
 }
 
 p {
-  margin-top: 10px;
+  margin: 30px 0;
+  font-family: var(--font-primary);
 }
 
 .navbar-container {
@@ -64,46 +66,12 @@ p {
   font-size: 0.9rem;
   padding: 16px;
   margin-top: 10px;
-  font-weight: 600;
 }
 
 .hero-image {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: auto;
   border-radius: 50%;
+  margin: 32px 0;
 }
 
-.cta-button {
-  position: relative;
-  font-weight: 400;
-  margin-top: 20px;
-  background-color: var(--btn-color);
-  border-width: var(--btn-border-width);
-  border-color: var(--btn-color);
-  color: #fff;
-  box-sizing: border-box;
-  &::before {
-    width: 120%;
-    height: 155%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: var(--btn-hover-radius);
-    border: 1px solid var(--btn-hover-color);
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1.1);
-    transform-origin: center center;
-    transition: all 0.25s;
-    content: "";
-  }
-  &:hover {
-    background-color: var(--btn-hover-color);
-    border-color: var(--btn-color);
-    border-style: inset;
-    border-radius: var(--btn-hover-radius);
-    &::before {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
-}
