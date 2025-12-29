@@ -14,11 +14,6 @@
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    var(--bg-gradient-start) 0%,
-    var(--bg-gradient-end) 100%
-  );
   font-family: Sora, sans-serif;
 }
 
@@ -61,6 +56,63 @@ p {
   margin: 0 10px;
 }
 
+.toggle-button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.toggle-button i {
+  font-size: 24px;
+  color: #6366f1;
+  transition: color 0.3s ease;
+}
+
+/* Light Theme */
+
+.light-mode {
+  background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start) 0%,
+    var(--bg-gradient-end) 100%
+  );
+  color: #000000;
+}
+
+/* Dark Theme */
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .toggle-button i {
+  color: #8b5cf6;
+}
+
+/* Toggle button hover effect */
+
+.toggle-button:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.dark-mode .toggle-button:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+/* Toggle button active effect */
+.toggle-button:active {
+  transform: scale(0.95);
+}
+
 .hero-section {
   text-align: center;
   font-size: 0.9rem;
@@ -74,4 +126,3 @@ p {
   border-radius: 50%;
   margin: 32px 0;
 }
-
